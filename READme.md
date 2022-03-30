@@ -1,4 +1,5 @@
 Regression Project - Estimating Zillow Property Prices 
+
 Jerry Nolf - Codeup - Innis Cohort - March 2022  
 
 ----  
@@ -17,7 +18,7 @@ The goal of this project is to identify key drivers that will help to estimate p
 ---- 
 ### 2. DESCRIPTION:
 
-This project will begin by acquiring the appropriate data from databases on the Codeup SQL server. The data will then be prepared for exploration by dropping null entries and removing outliers so that the data is usable for a machine learning regression model. After the data is prepared that exploration phase will allow us to dive deeper and identify key drivers of tax value. This exploration will provide more knowledge of the data and initial question.
+This project will begin by acquiring the appropriate data from databases on the mySQL server. The data will then be prepared for exploration by dropping null entries and removing outliers so that the data is usable for a machine learning regression model. After the data is prepared that exploration phase will allow us to dive deeper and identify key drivers of tax value. This exploration will provide more knowledge of the data and initial question.
 
 ---- 
 #### INITIAL QUESTIONS: 
@@ -37,10 +38,10 @@ The final DataFrame used to explore the data for this project contains the follo
 |   -----------   | ----------- | ---------- |
 | bathrooms | Number of bathrooms | float |
 | bedrooms   | Number of bedrooms | int64  |
-| sqft      |  Calculated total finished living area of the home   | int64 |
+| sqft      |  Calculated total finished living area in square feet   | int64 |
 | lot_sqft      |  Area of the lot in square feet | int64 |
 | tax_value   | The total tax assessed value of the parcel       | int64    | 
-| county   | Los Angeles, Orange, or Ventura County       |  object |
+| county   | The county in which the property is located  |  object |
 
 
 ---- 
@@ -57,12 +58,11 @@ Plan ➜ Acquire ➜ Prepare ➜ Explore ➜ Model & Evaluate ➜ Deliver
 
 
 ### 2. ACQUIRE
-- Create a function to pull appropriate information from the telco_churn_db
+- Create a function to pull appropriate information from the zillow database
 - Create and save an acquire.py file and made it available to import
 
 
 ### 3. PREPARE
-- Create a function that will do the following
 - Ensure all data types are usable
 - Rename columns to improve readability
 - Rename entries to a more informative names
@@ -71,13 +71,13 @@ Plan ➜ Acquire ➜ Prepare ➜ Explore ➜ Model & Evaluate ➜ Deliver
 - From the remaining 80%, 30% is pullout out to validate training
 - The remaining data is used as testing data
 - In the end, there should be a 56% Train, 24% Validate, and 20% Test split 
-- Create a prepare.py file with all the functions in this section
+- Create a prepare.py file with functions that will quickly process the above actions
 
 
-### 4.EXPLORE
+### 4. EXPLORE
 - Create an exploratory workbook
 - Create initial questions to help explore the data further
-- Make visualizations to help with understanding drivers
+- Make visualizations to help identify and understand key drivers
 - Use stats testing on established hypotheses
 
 
